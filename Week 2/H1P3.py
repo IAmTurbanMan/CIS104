@@ -1,3 +1,4 @@
+#input amount of change
 pennies = int (input ("Pennies: "))
 nickels = int (input ("Nickels: "))
 dimes = int (input ("Dimes: "))
@@ -5,6 +6,7 @@ quarters = int (input ("Quarters: "))
 half_dollar = int (input ("Half dollar coins: "))
 dollar = int (input ("One dollar coins: "))
 
+#if statements to determine whether plural
 if pennies == 1:
     print ("You have {} penny.".format (pennies))
 else:
@@ -35,13 +37,18 @@ if dollar == 1:
 else:
     print ("You have {} one dollar coins.".format (dollar))
 
+
+#determine actual value of coins
 penny_value = float (pennies * .01)
 nickel_value = float (nickels * .05)
 dime_value = float (dimes * .10)
 quarter_value = float (quarters * .25)
 half_dollar_value = float (half_dollar * .50)
 
+#sum value
 total = (penny_value + nickel_value + dime_value + quarter_value + half_dollar_value + dollar)
+#round value to two decimas (I was getting a value that was giving me six or seven decimals)
 round_total = float (round (total, 2))
 
+#print total
 print ("You have a total of ${}.".format (round_total))
