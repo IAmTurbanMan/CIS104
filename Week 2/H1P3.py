@@ -47,8 +47,6 @@ half_dollar_value = float (half_dollar * .50)
 
 #sum value
 total = (penny_value + nickel_value + dime_value + quarter_value + half_dollar_value + dollar)
-#round value to two decimas (I was getting a value that was giving me six or seven decimals)
-round_total = float (round (total, 2))
 
 #print total
-print ("You have a total of ${}.".format (round_total))
+print ("You have a total of ${:.2f}.".format (total))
