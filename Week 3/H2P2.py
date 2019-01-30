@@ -11,10 +11,9 @@ bookPages = int (input ("How many pages does the book have? "))
 #modified to suit my needs
 import datetime
 now = datetime.datetime.now ()
-currentYear = (now.year)
 
 #calculate and store age of book
-bookAge = (currentYear - bookPublishYear)
+bookAge = (now.year - bookPublishYear)
 
 #conditional statements for age
 if (bookAge < 10):
