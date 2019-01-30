@@ -7,6 +7,8 @@ bookPublishYear = int (input ("What year was the book published? "))
 bookPages = int (input ("How many pages does the book have? "))
 
 #get current year and store
+#found this code @ https://stackoverflow.com/questions/30071886/how-to-get-current-time-in-python-and-break-up-into-year-month-day-hour-minu
+#modified to suit my needs
 import datetime
 now = datetime.datetime.now ()
 currentYear = (now.year)
