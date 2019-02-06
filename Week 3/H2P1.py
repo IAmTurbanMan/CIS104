@@ -7,7 +7,7 @@ age = int (input ("Enter your age: "))
 futureAge = int (age + 10)
 
 #print greeting giving user a sense of impending doom
-print ("You will be {} years old in ten years! You're getting old".format (futureAge))
+print ("You will be {} years old in ten years! You're getting old.".format (futureAge))
 
 #ask for and store Fahrenheit
 temperatureF = float (input ("Enter the current temperature in Fahrenheit: "))
