@@ -1,10 +1,21 @@
 import calculator as calc
+import math
 
-currVal = 0.0
-
+print = ("select an operation")
+print = ("+ Add")
+print = ("- Subtract")
+print = ("* Multiply")
+print = ("/ Divide")
+print = ("^ Power")
+print = ("I/i Invert")
+print = ("S/s Store memory")
+print = ("R/r Recall memory")
+print = ("M/m Clear memory")
+print = ("C/c Clear calculator")
+print = ("X/x Exit =")
 num1 = float (input ("enter a number: "))
-num2 = float (input ("enter another number: "))
 oper = (input ("enter an operation: "))
+num2 = float ()
 
 if (oper == "+"):
     currVal = calc.addition (num1,num2)

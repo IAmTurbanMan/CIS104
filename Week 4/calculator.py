@@ -1,35 +1,48 @@
+import math
+
+#initialize variables
+currVal = 0.0
 memVal = 0.0
 
-def calcClear ():
+#function to clear calculator
+def calcClear (memVal, currVal):
     memVal = 0.0
-    print ("calculator cleared")
+    currVal = 0.0
+    return print ("calculator cleared")
 
+#function to add two numbers
 def addition (x,y):
-    return x + y
+    currVal = x + y
+    return print (currVal)
 
 def subtraction (x,y):
-    return x - y
+    currVal = x - y
+    return print (currVal)
 
 def multiplication (x,y):
-    return x * y
+    currVal = x * y
+    return print (currVal)
 
 def divison (x,y):
-    return x / y
+    currVal = x / y
+    return print (currVal)
 
 def exponent (x,y):
-    return x ** y
+    currVal = x ** y
+    return print (currVal)
 
 def invert (x):
-    return x * -1
+    currVal = x * -1
+    return print (currVal)
 
-def memStore (x):
-    memVal = x
-    print ("{} stored".format (memVal))
+def memStore (memVal, currVal):
+    memVal = currVal
+    return print ("{} stored".format (memVal))
 
-def memRecall ():
-    return memVal
-    print ("{} recalled".format (memVal))
+def memRecall (currVal, memVal):
+    currVal = memVal
+    return print ("{} recalled".format (currVal))
 
-def memClear ():
+def memClear (memVal):
     memVal = 0.0
     print ("memory cleared")
