@@ -1,46 +1,70 @@
 import calculator as calc
 import math
+import msvcrt
 
-print = ("select an operation")
-print = ("+ Add")
-print = ("- Subtract")
-print = ("* Multiply")
-print = ("/ Divide")
-print = ("^ Power")
-print = ("I/i Invert")
-print = ("S/s Store memory")
-print = ("R/r Recall memory")
-print = ("M/m Clear memory")
-print = ("C/c Clear calculator")
-print = ("X/x Exit =")
-num1 = float (input ("enter a number: "))
-oper = (input ("enter an operation: "))
-num2 = float ()
+res = 0.0
+num1 = 0.0
+num2 = 0.0
+oper = ""
 
-if (oper == "+"):
-    currVal = calc.addition (num1,num2)
-    num1 = currVal
-    print (currVal)
 
-elif (oper == "-"):
-    currVal = calc.subtraction (num1,num2)
-    num1 = currVal
-    print (currVal)
+print (">>")
 
-elif (oper == "*"):
-    currVal = calc.multiplication (num1,num2)
-    num1 = currVal
-    print (currVal)
+while (True):
+    if (num1 == 0.0 and res == 0.0):
+        print ("+|-|*|/|^|I|C|S|R|M|X")
+        print ("Press H for help")
+        oper = input ("choose a function from above: ")
 
-elif (oper == "/"):
-    currVal = calc.divison (num1,num2)
-    num1 = currVal
-    print (currVal)
+        if (oper == "H" or oper == "h"):
+            print ("+ addition")
+            print ("Press H for help")
+            print ("- subtract")
+            print ("* multiply")
+            print ("/ divide")
+            print ("^ exponent")
+            print ("I/i invert")
+            print ("C/c clear calculator")
+            print ("S/s store memory")
+            print ("R/r recall memory")
+            print ("M/m clear memory")
+            print ("X/x exit calculator")
 
-elif (oper == "^"):
-    currVal = calc.exponent (num1,num2)
-    num1 = currVal
-    print (currVal)
+        if (oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^"):
+            num1 = float (input ("first number: "))
+            num2 = float (input ("second number: "))
 
-else:
-    print ("please enter a valid operation")
+            if (oper == "+"):
+                res = calc.addition (num1,num2)
+                num1 = res
+                print (res)
+                break
+
+            if (oper == "-"):
+                res = calc.subtraction (num1,num2)
+                num1 = res
+                print (res)
+                break
+            
+            if (oper == "*"):
+                res = calc.multiplication (num1,num2)
+                num1 = res
+                print (res)
+                break
+
+            if (oper == "/"):
+                res = calc.divison (num1,num2)
+                num1 = res
+                print (res)
+                break
+
+            if (oper == "^"):
+                res = calc.exponent (num1,num2)
+                num1 = res
+                print (res)
+                break
+
+
+        elif (oper == "X" or oper == "x"):
+            break
+                
