@@ -3,7 +3,7 @@ import math
 #initialize variables
 #memVal to store memory
 
-memVal = 0.0
+memVal = None
 
 #mathematical functions
 def addition (x,y):
