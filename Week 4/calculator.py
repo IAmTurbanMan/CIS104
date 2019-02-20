@@ -1,6 +1,8 @@
 import math
 
 #initialize variables
+#memVal to store memory
+
 memVal = 0.0
 
 #mathematical functions
@@ -26,6 +28,7 @@ def invert (x):
 def memStore (x):
     global memVal
     memVal = x
+    return memVal
 
 def memRecall ():
     return memVal

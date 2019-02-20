@@ -16,6 +16,7 @@ while (True):
         print ("+|-|*|/|^|I|C|S|R|M|X")
         print ("Press H for help")
         oper = input ("choose a function from above: ")
+        print ("\n")
 
         #help option for operation
         if (oper == "H" or oper == "h"):
@@ -38,10 +39,12 @@ while (True):
             if (num1 != 0.0):
                 res = calc.invert (num1)
                 num1 = res
+                print ("\n")
             else:
                 num1 = float (input ("number to invert: "))
                 res = calc.invert (num1)
                 num1 = res
+                print ("\n")
         
         if (oper == "C" or oper == "c"):
             res = 0.0
@@ -49,19 +52,23 @@ while (True):
             num2 = 0.0
             calc.memVal = 0.0
             print ("calculator has been cleared")
+            print ("\n")
 
         if (oper == "S" or oper == "s"):
             calc.memStore (num1)
             print ("{} stored".format(calc.memVal))
+            print ("\n")
 
         if (oper == "R" or oper == "r"):
             res = calc.memRecall ()
+            num1 = res
             print ("{} recalled".format(calc.memVal))
 
         if (oper == "M" or oper == "m"):
             res = calc.memClear
             num1 = res
             print ("memory cleared")
+            print ("\n")
 
         #if statements for clculator operations
         if (oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^"):
@@ -72,26 +79,31 @@ while (True):
                 res = calc.addition (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
             if (oper == "-"):
                 res = calc.subtraction (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
             
             if (oper == "*"):
                 res = calc.multiplication (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
             if (oper == "/"):
                 res = calc.divison (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
             if (oper == "^"):
                 res = calc.exponent (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
 
         elif (oper == "X" or oper == "x"):
@@ -103,6 +115,7 @@ while (True):
         print ("+|-|*|/|^|I|C|S|R|M|X")
         print ("Press H for help")
         oper = input ("choose a function from above: ")
+        print ("\n")
 
         if (oper == "H" or oper == "h"):
             print ("+ addition")
@@ -138,19 +151,24 @@ while (True):
             num2 = 0.0
             calc.memVal = 0.0
             print ("calculator has been cleared")
+            print ("\n")
 
         if (oper == "S" or oper == "s"):
             calc.memStore (num1)
             print ("{} stored".format(calc.memVal))
+            print ("\n")
 
         if (oper == "R" or oper == "r"):
             res = calc.memRecall ()
+            num1 = res
             print ("{} recalled".format(calc.memVal))
+            print ("\n")
 
         if (oper == "M" or oper == "m"):
             res = calc.memClear
             num1 = res
             print ("memory cleared")
+            print ("\n")
 
         if (oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^"):
             print ("{} is the first number".format (num1))
@@ -160,26 +178,31 @@ while (True):
                 res = calc.addition (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
             if (oper == "-"):
                 res = calc.subtraction (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
             
             if (oper == "*"):
                 res = calc.multiplication (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
             if (oper == "/"):
                 res = calc.divison (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
             if (oper == "^"):
                 res = calc.exponent (num1,num2)
                 num1 = res
                 print (res)
+                print ("\n")
 
 
         elif (oper == "X" or oper == "x"):
