@@ -1,14 +1,15 @@
 import json
 
-aSong = 
-{
+aSong = {
     "Title": None,
     "Artist": None,
     "Album": None,
     "Track": None,
     "Year": None,
-    "Genre": None,
+    "Genre": None
 }
+
+songList = []
 
 def addSong():
     aSong["Title"] = input("Enter song title: ")
@@ -18,31 +19,31 @@ def addSong():
     aSong["Year"] = input("Enter release year: ")
     aSong["Genre"] = input("Enter genre: ")
 
-def saveSong():
-    if aSong["Title"] != None:
-        writefile = open("MusicDB.txt", "a")
-        writefile.write(json.dumps(Song))
-    elif aSong["Title"] == None:
-        print("You must add a song first!")
+    #succesful attempt at adding the dictionary to a list
+    songList.append(aSong)
 
-def clearSong():
-    file = open("MusicDB.txt", "w")
-    file.truncate(0)
+def saveSong():
+    #unsuccessful attempt at writing each element in the list to the file
+    if len(songList) != 0:
+        with open("MusicDB.txt", "w") as f:
+            for item in songList:
+                f.write("%s\n" % item)
+    elif len(songList) == 0:
+        print("You must add a song first!")
 
 def listSong():
     count = 0
     f = open("MusicDB.txt", "r")
     for entry in f:
-        empty = []
         emptyEntry = entry.replace('"', '').strip("{").strip("}").strip(",").split("}{")
     for s in emptyEntry:
         count = count + 1
         print("Song #{}: {}\n".format (count, s))
 
 def menu():
-    print("add : Add a new song to the database\n")
-    print("list: List dong in the database\n")
-    print("save: Save the database\n")
-    print("help: Display this menu\n")
-    print("exit: Exit the program\n")
+    print("add : Add a new song to the database")
+    print("list: List dong in the database")
+    print("save: Save the database")
+    print("help: Display this menu")
+    print("exit: Exit the program")
 
