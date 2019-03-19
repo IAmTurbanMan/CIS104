@@ -19,15 +19,15 @@ def addSong():
     aSong["Year"] = input("Enter release year: ")
     aSong["Genre"] = input("Enter genre: ")
 
-    #succesful attempt at adding the dictionary to a list
+    #unsuccesful attempt at adding the dictionary to a list
     songList.append(aSong)
 
 def saveSong():
-    #unsuccessful attempt at writing each element in the list to the file
-    if len(songList) != 0:
+    #successful attempt at writing each element in the list to the file
+    if len(songList) > 0:
         with open("MusicDB.txt", "w") as f:
             for item in songList:
-                f.write("%s\n" % item)
+                f.write("{}\n".format (item))
     elif len(songList) == 0:
         print("You must add a song first!")
 
