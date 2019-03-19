@@ -31,6 +31,15 @@ def newPassword():
 
     print(passList)
 
+def showPassword():
+    websiteSearch = input("for what website: ")
+    for entry in passList:
+        if websiteSearch == entry['website']:
+            print (entry['username'])
+            print (entry['password'])
+            break
+    print ("Website does not exist")
+
 while True:
     
     print ('''
@@ -46,6 +55,6 @@ while True:
     elif command == "exit":
         break
     elif command == "show":
-        pass
+        showPassword()
     else:
         print ("Please enter a valid command")
