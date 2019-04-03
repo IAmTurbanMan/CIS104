@@ -41,6 +41,7 @@ while True:
         if (sortBy == "release"):
             songList = sorted(songList, key = itemgetter('Year'))
 
+    #https://stackoverflow.com/questions/72899/how-do-i-sort-a-list-of-dictionaries-by-a-value-of-the-dictionary
 
     elif cmd == "exit":
         break

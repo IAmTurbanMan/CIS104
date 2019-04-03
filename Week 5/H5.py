@@ -18,17 +18,12 @@ def addSong():
 
 def saveSong():
     #successful attempt at writing each element in the list to the file
-
+    #pickles save lists and dictionaries as lists and dictionaries. Everything is stored in binary.
+    #https://pythonprogramming.net/python-pickle-module-save-objects-serialization/
+    
     pickleOut = open("MusicDB.pickle", "wb")
     pickle.dump(songList, pickleOut)
     pickleOut.close()
-
-    # if len(songList) > 0:
-    #     with open("MusicDB.txt", "w") as f:
-    #         for item in songList:
-    #             f.write("{}\n".format (item))
-    # elif len(songList) == 0:
-    #     print("You must add a song first!")
 
 def listSong():
     print (*songList, sep = "\n")
