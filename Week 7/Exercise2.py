@@ -8,6 +8,4 @@ for x in numbers:
         if (x%7 == 0):
                 divisibleNumbers.append(x)
 
-count = len(divisibleNumbers)
-
-print("The number of integers that are divisible by 7 within the range 1-1000 is: {}".format (count))
+print("The number of integers that are divisible by 7 within the range 1-1000 is: {}".format (len(divisibleNumbers)))
