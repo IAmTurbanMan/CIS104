@@ -59,14 +59,14 @@ def findSong():
 
 def clearSong():
     yesOrNo = input("Are you sure you want to clear the database? y/n: ")
-    if yesOrNo == "y":
+    if yesOrNo.lower() == "y":
         songList.clear()
         if os.path.exists("MusicDB.pickle"):
             os.remove("MusicDB.pickle")
             print("Database has been cleared.")
         else:
             print("This file does not exist.")
-    if yesOrNo == "n":
+    if yesOrNo.lower() == "n":
         pass
 
 def menu():
